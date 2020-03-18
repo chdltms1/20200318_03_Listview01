@@ -15,13 +15,15 @@ public class StoreAdapters extends ArrayAdapter<Store> {
 
     Context mcontext;//화면과 연결하는 연결고리
     List<Store> mList;//뿌려줄 목록을 담고있는 변수
-    LayoutInflater inf;//
+    LayoutInflater inf;////xml -> 객체화 시켜주는 역할 클래스
 
 
 
     public StoreAdapters(@NonNull Context context, int resource, @NonNull List<Store> objects) {
         super(context, resource, objects);
 
+
+        //생성자가 실핼될때 세개의 변수를 체워줌
         mcontext = context;
         mList = objects;
         inf = LayoutInflater.from(mcontext);
